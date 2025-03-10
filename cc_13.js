@@ -37,3 +37,18 @@ function createEmployeeCard(name, position) {
 // Example usage:
 createEmployeeCard("John Doe", "Software Engineer");
 createEmployeeCard("Jane Smith", "Project Manager");
+
+// Task 3
+function highlightAllEmployees() {
+    // Select all employee cards
+    const employeeCards = document.querySelectorAll(".employee-card");
+
+    // Convert NodeList to an array
+    const cardsArray = Array.from(employeeCards);
+
+    // Apply a style update to highlight each card
+    cardsArray.forEach(card => {
+        card.classList.add("highlight");
+    });
+}
+

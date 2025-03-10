@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +11,19 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            background-color: #f4f4f4;
         }
+
         header, footer {
             background-color: #333;
             color: white;
             padding: 1em;
         }
+
         main {
             padding: 20px;
         }
+
         #employeeContainer {
             display: flex;
             flex-wrap: wrap;
@@ -27,6 +32,52 @@
             padding: 20px;
             border: 1px solid #ccc;
             min-height: 200px;
+            background-color: white;
+        }
+
+        .employee-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+            background-color: #f9f9f9;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .employee-card button {
+            margin: 5px;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .edit-btn {
+            background-color: blue;
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background-color: darkblue;
+        }
+
+        .save-btn {
+            background-color: green;
+            color: white;
+        }
+
+        .save-btn:hover {
+            background-color: darkgreen;
+        }
+
+        .remove-btn {
+            background-color: red;
+            color: white;
+        }
+
+        .remove-btn:hover {
+            background-color: darkred;
         }
     </style>
 </head>
@@ -38,6 +89,7 @@
 
     <main>
         <h2>Our Team</h2>
+        <button onclick="createEmployeeCard('New Employee', 'New Position')">Add Employee</button>
         <div id="employeeContainer">
             <!-- Employee cards will be dynamically added here -->
         </div>
@@ -47,5 +99,8 @@
         <p>&copy; 2025 Company Name. All rights reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
+
 </body>
 </html>
+
